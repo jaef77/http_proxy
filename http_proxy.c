@@ -253,7 +253,6 @@ void *http_relay(void *client_socket_information)
 		/********************* server --> proxy (HTTP response) *********************/
 		n = read(server_sock, buf, BUFSIZE);
 
-		printf("READ server --> proxy (HTTP response) DONE!\n\n");
 		/********************* proxy --> client (HTTP response) *********************/
 		n = write(client_sockk, buf, strlen(buf));
 		if(n<0)
